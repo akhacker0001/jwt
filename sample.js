@@ -10,6 +10,8 @@ export default function Sample() {
       let flag=await localStorage.getItem('tokenKey')
       if(!!flag)
       {
+
+
         fetch("http://localhost:8080/api",{
           method:'GET',
         }).then((obj)=>{
@@ -18,13 +20,14 @@ export default function Sample() {
           console.log(obj)
           console.log('other api triggered')
         })
+
+
       }
     }
 
     const getData=(val)=>{
       console.log(val)
-      // let formdata=new FormData()
-      // formdata.append('user',val)
+
          fetch("http://localhost:8080/api/post",{
             method:"POST",
             headers: {
